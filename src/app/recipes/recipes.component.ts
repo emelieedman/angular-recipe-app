@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Url } from 'url';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-recipes',
@@ -7,15 +7,7 @@ import { Url } from 'url';
   styleUrls: ['./recipes.component.css'],
 })
 export class RecipesComponent implements OnInit {
-  recipeDetails: {
-    recipeName: string;
-    recipeDescription: string;
-    recipeImgPath: Url;
-  };
-
-  recipeSelected(event) {
-    this.recipeDetails = event;
-  }
+  selectedRecipe: Recipe;
 
   constructor() {}
 
